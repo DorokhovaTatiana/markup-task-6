@@ -23,7 +23,7 @@ a:hover
 {
     display: grid;
     font: 14px Arial Helvetica sans-serif;
-    grid-template-columns: 1fr 270px 270px 270px 200px;
+    grid-template-columns: 1fr 300px 300px 300px 200px;
     grid-template-rows: 60px 190px 1fr 500px;
     grid-template-areas: 'a1 a1 a1 a1 a2'
         'l1 b b w c'
