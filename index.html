@@ -3,7 +3,370 @@
 <head>
     <meta charset="utf-8">
     <title>Задача «Морда»</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
+    <div class="layout">
+        <article class="geolocation">
+            <a class="link geolocation__link" href="#">
+                <span class="geolocation_img">➤</span>
+                <span class="geolocation_text">Екатеринбург</span>
+            </a>
+            <a class="link email-info__link email-info__settings" href="#">Настройка</a>
+        </article>
+        <article class="email-info">
+            <a class="link login email-info__link" href="#">login</a>
+            <a class="link email-info__link" href="#">
+                Почта
+                <span class="email-info__user">138</span>
+            </a>
+        </article>
+        <article class="logo">
+            <img class="logo__img" src="images/yandex.jpg" alt="">
+        </article>
+        <article class="news">
+            <div class="news__header">
+                <h2>
+                    <a class="link first-link news__link header__link" href="#">Сейчас в СМИ</a>
+                </h2>
+                <h2>
+                    <a class="link second-link news__link header__link" href="#">в Екатеринбурге</a>
+                </h2>
+                <span class="current-data">19 ноября, воскресенье 23:05</span>
+            </div>
+            <ul class="list news__list">
+                <li class="list__item">
+                    <a class="link list__link" href="#">
+                        Порошенко назвал Украину «космической державой»
+                    </a>
+                </li>
+                <li class="list__item">
+                    <a class="link list__link" href="#">
+                        Саакашвили заявил о готовности возглавить правительство Украины
+                    </a>
+                </li>
+                <li class="list__item">
+                    <a class="link list__link" href="#">
+                        Правящая партия Зимбабве требует от Мугабе уйти в отставку
+                    </a>
+                </li>
+                <li class="list__item">
+                    <a class="link list__link" href="#">
+                        Шаманов предупредил о «взрыве» ситуации на Украине из-за оружия из США
+                    </a>
+                </li>
+                <li class="list__item">
+                    <a class="link list__link" href="#">
+                        Эрдоган видит в скандале на учениях НАТО оскорбление для всей Турции
+                    </a>
+                </li>
+            </ul>
+            <div class="stocks">
+                <div class="stocks__item">
+                    <a class="link stocks__link" href="#">USD ЦБ</a>
+                    <span class="stocks-price">59,63</span>
+                    <span class="stocks-delta">-0,36</span>
+                </div>
+                <div class="stocks__item">
+                    <a class="link stocks__link" href="#">EUR ЦБ</a>
+                    <span class="stocks-price">70,36</span>
+                    <span class="stocks-delta">−0,69</span>
+                </div>
+                <div class="stocks__item">
+                    <a class="link stocks__link" href="#">НЕФТЬ</a>
+                    <span class="stocks-price">62,74</span>
+                    <span class="stocks-delta">+2,13%</span>
+                </div>
+            </div>
+        </article>
+        <article class="widget">
+            <img src="images/optimize.png" alt="">
+            <h2>
+                В отпуск или по делу</h2>
+            <div class="description-widget">
+                <span>Яндекс поможет найти</span>
+                <span>подходящие авиабилеты</span>
+            </div>
+        </article>
+        <main>
+            <div class="category">
+                <a class="category__link" href="#">Видео</a>
+                <a class="category__link" href="#">Картинки</a>
+                <a class="category__link" href="#">Новости</a>
+                <a class="category__link" href="#">Карты</a>
+                <a class="category__link" href="#">Маркет</a>
+                <a class="category__link" href="#">Переводчик</a>
+                <a class="category__link" href="#">Музыка</a>
+                <a class="category__link" href="#">ещё</a>
+            </div>
+            <form class="search" action="index.html" method="post">
+                <input type="text" class="search__input">
+                <button type="button" name="button" class="search__button">
+                    <span class="search__text">Найти</span>
+                </button>
+            </form>
+            <div class="seach-example">
+                <span>Найдётся всё. Например,
+                    <a href="#" class="seach-example__text">что такое даггеротип</a>
+                </span>
+                <a class="seach-example__link" href="#">
+                    <img  class="seach-example_img" src="images/alisa.png" alt="">
+                    <span>Голосовой помощник Алиса</span>
+                </a>
+            </div>
+            <div class="advertising">
+            </div>
+        </main>
+        <article class="b1">
+            <article class="services">
+                <h2 class="header">
+                    <a class="link header__link" href="#">Посещаемое</a>
+                </h2>
+                <ul class="list services__list">
+                    <li class="list__item">
+                        <a class="link list__link service__link" href="#">Маркет</a>
+                        <span>&nbsp;—&nbsp;</span>
+                        <a class="link list__link" href="#">пылесосы Dyson</a>
+                    </li>
+                    <li class="list__item">
+                        <a class="link list__link service__link" href="#">Авто.ру</a>
+                        <span>&nbsp;—&nbsp;</span>
+                        <a class="link list__link" href="#">Hyundai Tucson III</a>
+                    </li>
+                    <li class="list__item">
+                        <a class="link list__link service__link" href="#">Работа</a>
+                        <span>&nbsp;—&nbsp;</span>
+                        <a class="link list__link" href="#">комплектовщик</a>
+                    </li>
+                    <li class="list__item">
+                        <a class="link list__link service__link" href="#">Видео</a>
+                        <span>&nbsp;—&nbsp;</span>
+                        <a class="link list__link" href="#">смотреть мультсериал</a>
+                    </li>
+                    <li class="list__item">
+                        <a class="link list__link service__link" href="#">Музыка</a>
+                        <span>&nbsp;—&nbsp;</span>
+                        <a class="link list__link" href="#">оформите подписку</a>
+                    </li>
+                    <li class="list__item">
+                        <a class="link list__link service__link" href="#">Деньги</a>
+                        <span>&nbsp;—&nbsp;</span>
+                        <a class="link list__link" href="#">с кошелька на кошелек</a>
+                    </li>
+                </ul>
+            </article>
+            <article class="jokes">
+                <h2 class="header">
+                    <a class="link header__link" href="#">Лучшие анектоды</a>
+                </h2>
+                <input class="jokes__input" type="radio" name="joke" id="joke1" checked>
+                <article class="joke joke1">
+                    <span>Раздел:</span>
+                    <a class="link section__link" href="#">Спорт</a>
+                    <p class="joke__text">Решил покачать пресс. Лёг на пол. Уснул.</p>
+                </article>
+                <input class="jokes__input" type="radio" name="joke" id="joke2">
+                <article class="joke joke2">
+                    <span>Раздел:</span>
+                    <a class="link section__link" href="#">Биология</a>
+                    <p class="joke__text">
+                        Биология - это единственная наука, где умножение и деление - один и тот же процесс.
+                    </p>
+                </article>
+                <input class="jokes__input" type="radio" name="joke" id="joke3">
+                <article class="joke joke2">
+                    <span>Раздел:</span>
+                    <a class="link section__link" href="#">Медицинские</a>
+                    <p class="joke__text">
+                        -Вас лечить хорошо или бесплатно?
+                    </p>
+                </article>
+                <label class="header__link jokes__label" for="joke1">&#8635;  Показать еще</label>
+                <label class="header__link jokes__label" for="joke2">&#8635;  Показать еще</label>
+                <label class="header__link jokes__label" for="joke3">&#8635;  Показать еще</label>
+            </article>
+        </article>
+        <article class="b2">
+            <article class="tv">
+                <h2 class="header">
+                    <a class="link header__link" href="#">Телепрограмма</a>
+                    <input class="tv__button" type="button" value="ТВ онлайн ►">
+                </h2>
+                <ul class="list tv__list">
+                    <li class="list__item">
+                        <span class="time">00:55</span>
+                        <span>
+                            <a class="link list__link" href="#">Старый Новый год</a>
+                        </span>
+                        <span>НТВ</span>
+                    </li>
+                    <li class="list__item">
+                        <span class="time">01:00</span>
+                        <span>
+                            <a class="link list__link" href="#">Клевый парень</a>
+                        </span>
+                        <span>ТНТ</span>
+                    </li>
+                    <li class="list__item">
+                        <span class="time">01:15</span>
+                        <span>
+                            <a class="link list__link" href="#">Свой среди чужих</a>
+                        </span>
+                        <span>ТВ Центр</span>
+                    </li>
+                    <li class="list__item">
+                        <span class="time">01:20</span>
+                        <span>
+                            <a class="link list__link" href="#">Улицы разбитых фонарей</a>
+                        </span>
+                        <span>Пятый канал</span>
+                    </li>
+                    <li class="list__item">
+                        <span class="time">01:30</span>
+                        <span>
+                            <a class="link list__link" href="#">Следствие ведут знатоки</a>
+                        </span>
+                        <span>Россия 1</span>
+                    </li>
+                    <li class="list__item">
+                        <span class="time">01:40</span>
+                        <span>
+                            <a class="link list__link" href="#">Готэм</a>
+                        </span>
+                        <span>РЕН ТВ</span>
+                    </li>
+                </ul>
+            </article>
+            <article class="auto-news">
+                <h2 class="header">
+                    <a class="link header__link" href="#">Автомобильные новости</a>
+                </h2>
+                <ul class="list auto-news__list">
+                    <li class="list__item">
+                        <a class="link list__link" href="#">
+                            Эксперты назвали четыре способа завести машину без аккумулятора‍
+                        </a>
+                        <span class="publication-time">17:42</span>
+                    </li>
+                    <li class="list__item">
+                        <a class="link list__link" href="#">
+                            Хэтчбек Suzuki Swift стал «Автомобилем года 2017» в Японии
+                        </a>
+                        <span class="publication-time">17:45</span>
+                    </li>
+                    <li class="list__item">
+                        <a class="link list__link" href="#">
+                            Hennessey показали руль и панель приборов гиперкара Venom F5
+                        ‍</a>
+                        <span class="publication-time">18:00</span>
+                    </li>
+                    <li class="list__item">
+                        <a class="link list__link" href="#">
+                            В России цена на лифтбек Skoda Rapid выросла на 17 тысяч рублей
+                        </a>
+                        <span class="publication-time">17:59</span>
+                    </li>
+                    <li class="list__item">
+                        <a class="link list__link" href="#">
+                            Эксперты назвали лучший автомобиль 2017 года для женщин‍
+                        </a>
+                        <span class="publication-time">18:22</span>
+                    </li>
+                    <li class="list__item">
+                        <a class="link list__link" href="#">
+                            Во Франции найдено «кладбище» болидов Формулы-1‍
+                        </a>
+                        <span class="publication-time">18:45</span>
+                    </li>
+                    <li class="list__item">
+                        <a class="link list__link" href="#">
+                            Учёные: Электрокары безопасны для людей с кардиостимуляторами‍
+                        ‍</a>
+                        <span class="publication-time">18:55</span>
+                    </li>
+                    <li class="list__item">
+                        <a class="link list__link" href="#">
+                            АВТО-AMG обогнал Audi RS5 и BMW M5 на импровизированном заезде‍
+                        </a>
+                        <span class="publication-time">19:21</span>
+                    </li>
+                </ul>
+            </article>
+        </article>
+        <article class="b3">
+            <article class="weather">
+                <h2 class="header weather__header">
+                    <a class="link weather__link header__link" href="#">Погода</a>
+                    <img class="weather__img" src="images/weather.png" alt="">
+                    <span>−2 °C</span>
+                </h2>
+                <ul class="list">
+                    <li class="list__item">
+                        <a class="link list__link" href="#">Ночь −2,</a>
+                        <a class="link list__link" href="#">утро −2</a>
+                    </li>
+                </ul>
+            </article>
+            <article class="traffic-jam">
+                <h2 class="header traffic-jam__header">
+                    <a class="link traffic-jam__link header__link" href="#">Пробки</a>
+                    <a class="link traffic-jam__link" href="#">
+                        <img class="traffic__img" src="images/traffic.png" alt="">
+                        <span>4 балла</span>
+                    </a>
+                </h2>
+                <ul class="list">
+                    <li class="list__item">
+                        <a class="link list__link" href="#">Ох, уж эти пробки</a>
+                    </li>
+                </ul>
+            </article>
+            <article class="maps">
+                <h2 class="header">
+                    <a class="link header__link" href="#">Карта Екатеринбурга</a>
+                </h2>
+                <ul class="list">
+                    <li class="list__item">
+                        <a class="link list__link maps__link maps__first-link" href="#">Такси</a>
+                        <a class="link list__link maps__link" href="#">Расписания</a>
+                    </li>
+                    <li class="list__item">
+                        <a class="link list__link maps__link" href="#">Междугородные автобусы</a>
+                    </li>
+                </ul>
+            </article>
+            <article class="poster">
+                <h2 class="header">
+                    <a class="link header__link" href="#">Афиша</a>
+                </h2>
+                <ul class="list poster__list">
+                    <li class="list__item">
+                        <a class="link list__link" href="#">Тор: Рагнарёк</a>
+                        <span>фэнтези</span>
+                    </li>
+                    <li class="list__item">
+                        <a class="link list__link" href="#">Лига справедливости</a>
+                        <span>премьера</span>
+                    </li>
+                    <li class="list__item">
+                        <a class="link list__link" href="#">Убийство в Восточном экспрессе</a>
+                        <span>драма</span>
+                    </li>
+                    <li class="list__item">
+                        <a class="link list__link" href="#">Последний богатырь</a>
+                        <span>приключения</span>
+                    </li>
+                    <li class="list__item">
+                        <a class="link list__link" href="#">Мифы</a>
+                        <span>премьера</span>
+                    </li>
+                    <li class="list__item">
+                        <a class="link list__link" href="#">Концерты</a>
+                        <span>Oxxxymiron</span>
+                    </li>
+                </ul>
+            </article>
+        </article>
+    </div>
 </body>
 </html>

@@ -1,0 +1,372 @@
+html,
+body,
+.layout
+{
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+
+a
+{
+    text-decoration: none;
+}
+
+a:hover
+{
+    transition: 100ms;
+    color: #c00;
+}
+
+.layout
+{
+    display: grid;
+    font: 14px Arial Helvetica sans-serif;
+    grid-template-columns: 1fr 300px 300px 300px 200px;
+    grid-template-rows: 60px 190px 1fr 3fr;
+    grid-template-areas: 'a1 a1 a1 a1 a2'
+        'a b b w c'
+        'a d d d c'
+        'a e1 e2 e3 c';
+}
+
+.geolocation
+{
+    grid-area: a1;
+    justify-content: space-between;
+    margin: 10px 0 0 45px;
+}
+
+.email-info
+{
+    grid-area: a2;
+}
+
+.news
+{
+    grid-area: b;
+}
+
+.logo
+{
+    grid-area: a;
+    justify-content: flex-end;
+}
+
+.logo__img
+{
+    position: relative;
+    top: 23%;
+    left: 15px;
+    width: 140px;
+    height: 100px;
+}
+
+.b1
+{
+    grid-area: e1;
+}
+
+.b2
+{
+    grid-area: e2;
+}
+
+.b3
+{
+    grid-area: e3;
+}
+
+main
+{
+    grid-area: d;
+
+}
+
+.widget
+{
+    grid-area: w;
+}
+
+.auto-news__list
+{
+    height: 220px;
+    overflow-y: scroll;
+}
+
+.a4,
+.logo,
+.stocks,
+.email-info,
+.geolocation,
+.email-info,
+.seach-example,
+.news__header,
+.description-widget
+{
+    display: flex;
+}
+
+.news__header
+{
+    align-items: baseline;
+}
+
+.list,
+.news__header h2
+{
+    margin: 0;
+}
+
+.list
+{
+    list-style: none;
+}
+
+main,
+.news,
+.list,
+.joke,
+.header__link
+{
+    padding-left: 25px;
+}
+
+.news__list
+{
+    list-style: initial;
+    padding-left: 15px;
+}
+
+.search,
+.header,
+.news__header,
+.tv-list_item,
+.list__item
+{
+    margin-bottom: 8px;
+}
+
+.tv__button
+{
+    padding: 8px;
+    border-radius: 4px;
+    background: linear-gradient(to right, #00a3fa, #716ef8);
+    border: none;
+}
+
+.stocks__item,
+.news__link
+{
+    padding-left: 0;
+    margin-right: 20px;
+}
+
+.stocks__link,
+.section__link
+{
+    font-size: 12px;
+}
+
+.link
+{
+    color: #000;
+}
+
+.header__link,
+.section__link
+{
+    color: #0054b9;
+}
+
+.second-link
+{
+    color: #6da2e1;
+}
+
+.current-data,
+.stocks-delta,
+.publication-time,
+.seach-example__text
+{
+    color: #999;
+}
+
+.current-data
+{
+    font-size: 12px;
+}
+
+.stocks__link,
+.stocks-price,
+.maps__first-link
+{
+    margin-right: 5px;
+}
+
+.news,
+.widget
+{
+    align-self: flex-end;
+}
+
+.email-info,
+.description-widget
+{
+    flex-direction: column;
+}
+
+.email-info
+{
+    width: 80%;
+    height: 60px;
+    margin: 0 auto;
+    border-radius: 4px;
+    box-shadow: 0 0 10px;
+}
+
+.email-info__link
+{
+    padding: 10px 0 0 10px;
+}
+
+.email-info__settings
+{
+    position: relative;
+    right: 0;
+}
+
+.category__link
+{
+    display: inline-block;
+    padding: 20px 20px 10px 0;
+}
+
+.search__button
+{
+    left: -4px;
+    width: 88px;
+    border: none;
+    line-height: 38px;
+    position: relative;
+    background-color: #ffdc61;
+}
+
+.search__input,
+.seach-example
+{
+    width: 80%;
+}
+
+.search__input
+{
+    border: 2px solid #ffdc61;
+    line-height: 34px;
+}
+
+.search
+{
+    overflow: hidden;
+}
+
+.search__text
+{
+    position: relative;
+    left: 5px;
+}
+
+.search__text:after
+{
+    right: -68px;
+    content: '';
+    position: absolute;
+    border: 38px solid transparent;
+    border-left: 19px solid #ffdb4d;
+    top: -31px;
+
+}
+
+.email-info__user,
+.service__link,
+.stocks__link,
+.maps__link,
+.login
+{
+    font-weight: bold;
+}
+
+.email-info
+{
+    position: relative;
+    top: 10px;
+}
+
+.login:first-letter
+{
+    color: #f00;
+}
+
+.seach-example
+{
+    justify-content: space-between;
+}
+
+.weather__header,
+.traffic-jam__header,
+.seach-example__link
+{
+    display: flex;
+    align-items: center;
+}
+
+.weather__img,
+.weather__link,
+.traffic__img,
+.traffic-jam__link,
+.seach-example_img
+{
+    margin-right: 10px;
+}
+
+.advertising
+{
+    width: 80%;
+    height: 90px;
+    margin-top: 10px;
+    background: #000;
+}
+
+.geolocation_img
+{
+    display: inline-block;
+    transform: rotate(-45deg);
+}
+
+.joke
+{
+    height: 100px;
+}
+
+.jokes__label
+{
+    cursor: pointer;
+}
+
+.joke,
+.jokes__label,
+.jokes__input
+{
+    display: none;
+}
+
+.jokes__input:checked + .joke
+{
+    display: block;
+}
+
+input[id='joke1']:checked ~ label[for='joke2'],
+input[id='joke2']:checked ~ label[for='joke3'],
+input[id='joke3']:checked ~ label[for='joke1']
+{
+    display: block;
+}
