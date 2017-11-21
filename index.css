@@ -24,7 +24,7 @@ a:hover
     display: grid;
     font: 14px Arial Helvetica sans-serif;
     grid-template-columns: 1fr 300px 300px 300px 200px;
-    grid-template-rows: 60px 190px 1fr 500px;
+    grid-template-rows: 60px 190px 250px 500px;
     grid-template-areas: 'a1 a1 a1 a1 a2'
         'l1 b b w c'
         'l d d d c'
@@ -58,9 +58,9 @@ a:hover
 .logo__img
 {
     position: relative;
-    top: 10px;
+    margin-left: 18px;
+    top: 25px;
     width: 140px;
-    height: 100px;
 }
 
 .widgets
@@ -279,7 +279,7 @@ main,
     content: '';
     position: absolute;
     border: 38px solid transparent;
-    border-left: 19px solid #ffdb4d;
+    border-left: 19px solid #ffdc61;
     top: -31px;
 
 }
