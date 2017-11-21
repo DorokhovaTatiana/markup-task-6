@@ -7,12 +7,67 @@
 </head>
 <body>
     <div class="layout">
+        <input class="layout__input" type="checkbox" id="services" checked>
+        <input class="layout__input" type="checkbox" id="jokes" checked>
+        <input class="layout__input" type="checkbox" id="tv" checked>
+        <input class="layout__input" type="checkbox" id="auto-news" checked>
+        <input class="layout__input" type="checkbox" id="weather" checked>
+        <input class="layout__input" type="checkbox" id="traffic" checked>
+        <input class="layout__input" type="checkbox" id="maps" checked>
+        <input class="layout__input" type="checkbox" id="poster" checked>
         <article class="geolocation">
             <a class="link geolocation__link" href="#">
                 <span class="geolocation_img">➤</span>
                 <span class="geolocation_text">Екатеринбург</span>
             </a>
-            <a class="link email-info__link email-info__settings" href="#">Настройка</a>
+            <article class="settings">
+                <input class="settings__input" type="checkbox" name="settings" id="settings">
+                <label class="link email-info__link email-info__settings" for="settings">Настройка</label>
+                <div class="settings__box">
+                    <div class="box__item">
+                        <input type="checkbox" name="services" class="off" checked>
+                        <input type="checkbox" name="services" class="on">
+                        <label class="box__label" for="services">Посещаемое</label>
+                    </div>
+                    <div class="box__item">
+                        <input type="checkbox" name="jokes" class="off" checked>
+                        <input type="checkbox" name="jokes" class="on">
+                        <label class="box__label" for="jokes">Лучшие анекдоты</label>
+                    </div>
+                    <div class="box__item">
+                        <input type="checkbox" name="tv" class="off" checked>
+                        <input type="checkbox" name="tv" class="on">
+                        <label class="box__label" for="tv">Телепрограмма</label>
+                    </div>
+
+                    <div class="box__item">
+                        <input type="checkbox" name="auto-news" class="off" checked>
+                        <input type="checkbox" name="auto-news" class="on">
+                        <label class="box__label" for="auto-news">Автомобильные новости</label>
+                    </div>
+
+                    <div class="box__item">
+                        <input type="checkbox" name="weather" class="off" checked>
+                        <input type="checkbox" name="weather" class="on">
+                        <label class="box__label" for="weather">Погода</label>
+                    </div>
+                    <div class="box__item">
+                        <input type="checkbox" name="traffic" class="off" checked>
+                        <input type="checkbox" name="traffic" class="on">
+                        <label class="box__label" for="traffic">Пробки</label>
+                    </div>
+                    <div class="box__item">
+                        <input type="checkbox" name="maps" class="off" checked>
+                        <input type="checkbox" name="maps" class="on">
+                        <label class="box__label" for="maps">Карта Екатеринбурга</label>
+                    </div>
+                    <div class="box__item">
+                        <input type="checkbox" name="poster" class="off" checked>
+                        <input type="checkbox" name="poster" class="on">
+                        <label class="box__label" for="poster">Афиша</label>
+                    </div>
+                </div>
+            </article>
         </article>
         <article class="email-info">
             <a class="link login email-info__link" href="#">login</a>
@@ -81,8 +136,10 @@
         </article>
         <article class="widget">
             <img src="images/optimize.png" alt="">
-            <h2>
-                В отпуск или по делу</h2>
+            <h2 class="widget_header">
+                <span>В отпуск</span>
+                <span>или по делу</span>
+            </h2>
             <div class="description-widget">
                 <span>Яндекс поможет найти</span>
                 <span>подходящие авиабилеты</span>
@@ -117,8 +174,8 @@
             <div class="advertising">
             </div>
         </main>
-        <article class="b1">
-            <article class="services">
+        <article class="widgets">
+            <article class="services widgets__item">
                 <h2 class="header">
                     <a class="link header__link" href="#">Посещаемое</a>
                 </h2>
@@ -155,7 +212,7 @@
                     </li>
                 </ul>
             </article>
-            <article class="jokes">
+            <article class="jokes widgets__item">
                 <h2 class="header">
                     <a class="link header__link" href="#">Лучшие анектоды</a>
                 </h2>
@@ -185,9 +242,7 @@
                 <label class="header__link jokes__label" for="joke2">&#8635;  Показать еще</label>
                 <label class="header__link jokes__label" for="joke3">&#8635;  Показать еще</label>
             </article>
-        </article>
-        <article class="b2">
-            <article class="tv">
+            <article class="tv widgets__item">
                 <h2 class="header">
                     <a class="link header__link" href="#">Телепрограмма</a>
                     <input class="tv__button" type="button" value="ТВ онлайн ►">
@@ -237,7 +292,7 @@
                     </li>
                 </ul>
             </article>
-            <article class="auto-news">
+            <article class="auto-news widgets__item">
                 <h2 class="header">
                     <a class="link header__link" href="#">Автомобильные новости</a>
                 </h2>
@@ -292,9 +347,7 @@
                     </li>
                 </ul>
             </article>
-        </article>
-        <article class="b3">
-            <article class="weather">
+            <article class="weather widgets__item">
                 <h2 class="header weather__header">
                     <a class="link weather__link header__link" href="#">Погода</a>
                     <img class="weather__img" src="images/weather.png" alt="">
@@ -321,7 +374,7 @@
                     </li>
                 </ul>
             </article>
-            <article class="maps">
+            <article class="maps widgets__item">
                 <h2 class="header">
                     <a class="link header__link" href="#">Карта Екатеринбурга</a>
                 </h2>
@@ -335,30 +388,30 @@
                     </li>
                 </ul>
             </article>
-            <article class="poster">
+            <article class="poster widgets__item">
                 <h2 class="header">
                     <a class="link header__link" href="#">Афиша</a>
                 </h2>
                 <ul class="list poster__list">
                     <li class="list__item">
                         <a class="link list__link" href="#">Тор: Рагнарёк</a>
-                        <span>фэнтези</span>
+                        <span class="cinematic-genre">фэнтези</span>
                     </li>
                     <li class="list__item">
                         <a class="link list__link" href="#">Лига справедливости</a>
-                        <span>премьера</span>
+                        <span class="cinematic-genre">премьера</span>
                     </li>
                     <li class="list__item">
                         <a class="link list__link" href="#">Убийство в Восточном экспрессе</a>
-                        <span>драма</span>
+                        <span class="cinematic-genre">драма</span>
                     </li>
                     <li class="list__item">
                         <a class="link list__link" href="#">Последний богатырь</a>
-                        <span>приключения</span>
+                        <span class="cinematic-genre">приключения</span>
                     </li>
                     <li class="list__item">
                         <a class="link list__link" href="#">Мифы</a>
-                        <span>премьера</span>
+                        <span class="cinematic-genre">премьера</span>
                     </li>
                     <li class="list__item">
                         <a class="link list__link" href="#">Концерты</a>

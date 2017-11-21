@@ -1,6 +1,7 @@
 html,
 body,
-.layout
+.layout,
+.widget_header
 {
     margin: 0;
     height: 100%;
@@ -22,12 +23,12 @@ a:hover
 {
     display: grid;
     font: 14px Arial Helvetica sans-serif;
-    grid-template-columns: 1fr 300px 300px 300px 200px;
-    grid-template-rows: 60px 190px 1fr 3fr;
+    grid-template-columns: 1fr 270px 270px 270px 200px;
+    grid-template-rows: 60px 190px 1fr 500px;
     grid-template-areas: 'a1 a1 a1 a1 a2'
-        'a b b w c'
-        'a d d d c'
-        'a e1 e2 e3 c';
+        'l1 b b w c'
+        'l d d d c'
+        'l2 e e e c';
 }
 
 .geolocation
@@ -49,32 +50,26 @@ a:hover
 
 .logo
 {
-    grid-area: a;
+    grid-area: l;
+    display: flex;
     justify-content: flex-end;
 }
 
 .logo__img
 {
     position: relative;
-    top: 23%;
-    left: 15px;
+    top: 10px;
     width: 140px;
     height: 100px;
 }
 
-.b1
+.widgets
 {
-    grid-area: e1;
-}
-
-.b2
-{
-    grid-area: e2;
-}
-
-.b3
-{
-    grid-area: e3;
+    grid-area: e;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: flex-start;
 }
 
 main
@@ -88,21 +83,32 @@ main
     grid-area: w;
 }
 
+.widgets__item
+{
+    width: 300px;
+}
+
 .auto-news__list
 {
     height: 220px;
     overflow-y: scroll;
 }
 
-.a4,
+.auto-news__list::-webkit-scrollbar
+{
+    display: none;
+}
+
 .logo,
 .stocks,
 .email-info,
+.box__item,
 .geolocation,
-.email-info,
 .seach-example,
+.settings__box,
 .news__header,
-.description-widget
+.description-widget,
+.widget_header
 {
     display: flex;
 }
@@ -141,7 +147,6 @@ main,
 .search,
 .header,
 .news__header,
-.tv-list_item,
 .list__item
 {
     margin-bottom: 8px;
@@ -163,7 +168,8 @@ main,
 }
 
 .stocks__link,
-.section__link
+.section__link,
+.current-data
 {
     font-size: 12px;
 }
@@ -187,14 +193,10 @@ main,
 .current-data,
 .stocks-delta,
 .publication-time,
-.seach-example__text
+.seach-example__text,
+.cinematic-genre
 {
     color: #999;
-}
-
-.current-data
-{
-    font-size: 12px;
 }
 
 .stocks__link,
@@ -211,7 +213,9 @@ main,
 }
 
 .email-info,
-.description-widget
+.settings__box,
+.description-widget,
+.widget_header
 {
     flex-direction: column;
 }
@@ -228,12 +232,6 @@ main,
 .email-info__link
 {
     padding: 10px 0 0 10px;
-}
-
-.email-info__settings
-{
-    position: relative;
-    right: 0;
 }
 
 .category__link
@@ -354,7 +352,10 @@ main,
 
 .joke,
 .jokes__label,
-.jokes__input
+.jokes__input,
+.layout__input,
+.settings__box,
+.settings__input
 {
     display: none;
 }
@@ -369,4 +370,63 @@ input[id='joke2']:checked ~ label[for='joke3'],
 input[id='joke3']:checked ~ label[for='joke1']
 {
     display: block;
+}
+
+input[id='services']:not(:checked) ~ .widgets .services,
+input[id='jokes']:not(:checked) ~ .widgets .jokes,
+input[id='tv']:not(:checked) ~ .widgets .tv,
+input[id='auto-news']:not(:checked) ~ .widgets .auto-news,
+input[id='weather']:not(:checked) ~ .widgets .weather,
+input[id='traffic']:not(:checked) ~ .widgets .traffic-jam,
+input[id='maps']:not(:checked) ~ .widgets .maps,
+input[id='poster']:not(:checked) ~ .widgets .poster
+{
+    display: none;
+}
+
+input[id='services']:not(:checked) ~ .geolocation input[name='services'].off,
+input[id='jokes']:not(:checked) ~ .geolocation input[name='jokes'].off,
+input[id='tv']:not(:checked) ~ .geolocation input[name='tv'].off,
+input[id='auto-news']:not(:checked) ~ .geolocation input[name='auto-news'].off,
+input[id='weather']:not(:checked) ~ .geolocation input[name='weather'].off,
+input[id='traffic']:not(:checked) ~ .geolocation input[name='traffic'].off,
+input[id='maps']:not(:checked) ~ .geolocation input[name='maps'].off,
+input[id='poster']:not(:checked) ~ .geolocation input[name='poster'].off
+{
+    display: none;
+}
+
+input[id='services']:checked ~ .geolocation input[name='services'].on,
+input[id='jokes']:checked ~ .geolocation input[name='jokes'].on,
+input[id='tv']:checked ~ .geolocation input[name='tv'].on,
+input[id='auto-news']:checked ~ .geolocation input[name='auto-news'].on,
+input[id='weather']:checked ~ .geolocation input[name='weather'].on,
+input[id='traffic']:checked ~ .geolocation input[name='traffic'].on,
+input[id='maps']:checked ~ .geolocation input[name='maps'].on,
+input[id='poster']:checked ~ .geolocation input[name='poster'].on
+{
+    display: none;
+}
+
+.settings
+{
+    width: 70px;
+}
+
+input[id='settings']:checked ~ .settings__box
+{
+    display: flex;
+}
+
+.settings__box
+{
+    left: 50%;
+    margin: 10px;
+    padding: 10px;
+    width: 170px;
+    box-shadow: 0 0 10px;
+    position: relative;
+    z-index: 5;
+    background-color: #f8f8ff;
+    transform: translateX(-50%);
 }
