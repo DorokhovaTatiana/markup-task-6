@@ -147,6 +147,7 @@ main,
 .search,
 .header,
 .news__header,
+.widget_header,
 .list__item
 {
     margin-bottom: 8px;
@@ -244,9 +245,10 @@ main,
 {
     left: -4px;
     width: 88px;
-    border: none;
-    line-height: 38px;
+    border: 1px solid #ffdc61;
+    padding: 2px 0;
     position: relative;
+    line-height: 39px;
     background-color: #ffdc61;
 }
 
@@ -259,7 +261,7 @@ main,
 .search__input
 {
     border: 2px solid #ffdc61;
-    line-height: 34px;
+    line-height: 39px;
 }
 
 .search
@@ -275,12 +277,13 @@ main,
 
 .search__text:after
 {
-    right: -68px;
     content: '';
     position: absolute;
-    border: 38px solid transparent;
-    border-left: 19px solid #ffdc61;
-    top: -31px;
+    border: 44px solid transparent;
+    border-left-color: #ffdc61;
+    border-right: 0;
+    top: -36px;
+    left: 38px;
 
 }
 
