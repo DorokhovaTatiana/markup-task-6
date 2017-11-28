@@ -1,7 +1,7 @@
 html,
 body,
 .layout,
-.widget_header
+.widget__header
 {
     margin: 0;
     height: 100%;
@@ -22,51 +22,49 @@ a:hover
 .layout
 {
     display: grid;
-    font: 14px Arial Helvetica sans-serif;
-    grid-template-columns: 1fr 300px 300px 300px 200px;
-    grid-template-rows: 60px 190px 250px 500px;
-    grid-template-areas: 'a1 a1 a1 a1 a2'
-        'l1 b b w c'
-        'l d d d c'
-        'l2 e e e c';
+    font: 14px Arial, Helvetica, sans-serif;
+    grid-template-columns: 180px 300px 300px 300px 150px;
+    grid-template-rows: 60px 190px 1fr 500px;
+    grid-template-areas: 'geoloc geoloc geoloc geoloc mailbox'
+        'cell1 topnews topnews teaser emptycolumn'
+        'logo search search search emptycolumn'
+        'cell2 widget widget widget emptycolumn';
 }
 
 .geolocation
 {
-    grid-area: a1;
+    grid-area: geoloc;
     justify-content: space-between;
     margin: 10px 0 0 45px;
 }
 
 .email-info
 {
-    grid-area: a2;
+    grid-area: mailbox;
 }
 
 .news
 {
-    grid-area: b;
+    grid-area: topnews;
 }
 
 .logo
 {
-    grid-area: l;
-    display: flex;
+    grid-area: logo;
     justify-content: flex-end;
 }
 
 .logo__img
 {
-    position: relative;
-    margin-left: 18px;
-    top: 25px;
+    top: 10px;
     width: 140px;
+    height: 100px;
+    position: relative;
 }
 
 .widgets
 {
-    grid-area: e;
-    display: flex;
+    grid-area: widget;
     flex-wrap: wrap;
     flex-direction: column;
     align-content: flex-start;
@@ -74,13 +72,13 @@ a:hover
 
 main
 {
-    grid-area: d;
+    grid-area: search;
 
 }
 
 .widget
 {
-    grid-area: w;
+    grid-area: teaser;
 }
 
 .widgets__item
@@ -99,16 +97,7 @@ main
     display: none;
 }
 
-.logo,
-.stocks,
-.email-info,
-.box__item,
-.geolocation,
-.seach-example,
-.settings__box,
-.news__header,
-.description-widget,
-.widget_header
+.container
 {
     display: flex;
 }
@@ -147,7 +136,6 @@ main,
 .search,
 .header,
 .news__header,
-.widget_header,
 .list__item
 {
     margin-bottom: 8px;
@@ -216,7 +204,7 @@ main,
 .email-info,
 .settings__box,
 .description-widget,
-.widget_header
+.widget__header
 {
     flex-direction: column;
 }
@@ -245,10 +233,9 @@ main,
 {
     left: -4px;
     width: 88px;
-    border: 1px solid #ffdc61;
-    padding: 2px 0;
+    border: none;
+    line-height: 38px;
     position: relative;
-    line-height: 39px;
     background-color: #ffdc61;
 }
 
@@ -261,7 +248,7 @@ main,
 .search__input
 {
     border: 2px solid #ffdc61;
-    line-height: 39px;
+    line-height: 32px;
 }
 
 .search
@@ -279,11 +266,14 @@ main,
 {
     content: '';
     position: absolute;
-    border: 44px solid transparent;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-color: rgba(255, 219, 76, 0);
     border-left-color: #ffdc61;
-    border-right: 0;
-    top: -36px;
-    left: 38px;
+    top: -14px;
+    right: -311px;
+    border-width: 22px 0 22px 11px;
 
 }
 
