@@ -237,7 +237,13 @@ main,
 
 .email-info__link
 {
+
     padding: 10px 0 0 10px;
+}
+
+.email-info__link:hover
+{
+    cursor: pointer;
 }
 
 .category__link
